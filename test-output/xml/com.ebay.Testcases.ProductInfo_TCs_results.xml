@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="36.612">
+  <properties />
+  
+  
+            <testcase name="TS_verifyProductPrize" time="36.612" classname="com.ebay.Testcases.ProductInfo_TCs" />
+      
+</testsuite>
