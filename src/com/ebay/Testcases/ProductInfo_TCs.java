@@ -43,21 +43,21 @@ public class ProductInfo_TCs extends driverScript {
 	@Test(description = "To verify Product Prize", dataProvider = "testdata")
 	public void TS_verifyProductPrize(HashMap<String, String> hashMapValue) throws Exception {
 		System.out.println("inside verifyPrize");
-//		HomePage homePage = new HomePage();
-//		homePage.verifyHomePage();
-//		homePage.clickOnMenuButton();
-//		homePage.clickOnSignInTab();
-//		// SignIn Page
-//		SignInPage signinpage = new SignInPage();
-//		signinpage.clickUseEmailbutton();
-//		username = hashMapValue.get("0");
-//		password = hashMapValue.get("1");
-//		System.out.println(username + password);
-//		signinpage.enterSignInDetails(username, password);
-//
-//		WelcomePage welcomePage = new WelcomePage();
-//		welcomePage.verifyWelcomePage();
-//		welcomePage.clickOnMaybeLaterButton();
+		HomePage homePage = new HomePage();
+		homePage.verifyHomePage();
+		homePage.clickOnMenuButton();
+		homePage.clickOnSignInTab();
+		// SignIn Page
+		SignInPage signinpage = new SignInPage();
+		signinpage.clickUseEmailbutton();
+		username = hashMapValue.get("0");
+		password = hashMapValue.get("1");
+		System.out.println(username + password);
+		signinpage.enterSignInDetails(username, password);
+
+		WelcomePage welcomePage = new WelcomePage();
+		welcomePage.verifyWelcomePage();
+		welcomePage.clickOnMaybeLaterButton();
  
 		SearchPage searchPage = new SearchPage();
 		searchPage.verifySearchPage();
