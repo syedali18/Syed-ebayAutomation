@@ -58,7 +58,7 @@ public class ProductInfo_TCs extends driverScript {
 //		WelcomePage welcomePage = new WelcomePage();
 //		welcomePage.verifyWelcomePage();
 //		welcomePage.clickOnMaybeLaterButton();
-
+ 
 		SearchPage searchPage = new SearchPage();
 		searchPage.verifySearchPage();
 		String searchText = hashMapValue.get("2");
