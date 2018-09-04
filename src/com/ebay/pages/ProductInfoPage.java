@@ -22,12 +22,12 @@ public class ProductInfoPage extends BaseTest {
 	}
 	
 	public void verifyProductInfoPage() {
-		verifyPage(productinfopage.productsName);
+		verifyPage(productinfopage.productsName); 
 
 	}
 	
-	public void verifyProductInfo(String productPrizeInList) {
-		String ExpProductName = getData("TestDataSheet", 1, 3).trim();
+	public void verifyProductInfo(String productPrizeInList,String ExpectedProductName) {
+		String ExpProductName = ExpectedProductName;
 		String productName = getText(productinfopage.productsName);
 		String productPrize = getText(productinfopage.productPrize);
 		System.out.println(productName);

@@ -22,16 +22,16 @@ public class SearchPage extends BaseTest {
 		searchpage = new PageObjects();
 		PageFactory.initElements(driver, searchpage);
 	}
-
-	public void searchItem() {
+ 
+	public void searchItem(String searchVal) {
 		sleepThread();
-		String searchText = getData("TestDataSheet", 1, 2).trim();
+		String searchText = searchVal;
 		click(searchpage.search_TBX);
 		clearAndType(searchpage.search_TXT, searchText);
 		click(searchpage.search_item);
 //		click(searchpage.search_msg);
 
-	}
+	} 
 	
 	public void verifySearchPage() {
 		verifyPage(searchpage.search_TBX);

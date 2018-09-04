@@ -53,7 +53,7 @@ public class driverScript {
 
 		return androidDriver;
 	}
-
+ 
 	private void initDriver() {
 		System.out.println("Inside initDriver method");
 

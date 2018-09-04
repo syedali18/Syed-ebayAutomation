@@ -26,8 +26,8 @@ public class SearchResultPage extends BaseTest {
 
 	}
 
-	public String selectProduct() {
-		String ExpProductName = getData("TestDataSheet", 1, 3).trim();
+	public String selectProduct(String productName) {
+		String ExpProductName = productName;
 		List<WebElement> productsNames = searchresultpage.productsName;
 		List<WebElement> productsPrices = searchresultpage.productsPrice;
 		String productsPriceInList = "";
@@ -56,7 +56,7 @@ public class SearchResultPage extends BaseTest {
 			productsNames = searchresultpage.productsName;
 			productsPrices = searchresultpage.productsPrice;
 		}
-
+ 
 		return productsPriceInList;
 	}
 

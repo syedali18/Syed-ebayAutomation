@@ -82,11 +82,24 @@ public class BaseTest {
 
 	public void swipeDown() {
 		Dimension dim = driver.manage().window().getSize();
+		System.out.println(dim.getWidth());
 		int height = dim.getHeight();
 		int width = dim.getWidth();
 		int x = width / 2;
 		int top_y = (int) (height * 0.85);
 		int bottom_y = (int) (height * 0.40);
+		new io.appium.java_client.TouchAction(driver).longPress(PointOption.point(x, top_y))
+				.moveTo(PointOption.point(x, bottom_y)).release().perform();
+
+	}
+	
+	public void swipeUp() {
+		Dimension dim = driver.manage().window().getSize();
+		int height = dim.getHeight();
+		int width = dim.getWidth();
+		int x = width / 2;
+		int top_y = (int) (height * 0.45);
+		int bottom_y = (int) (height * 0.80);
 		new io.appium.java_client.TouchAction(driver).longPress(PointOption.point(x, top_y))
 				.moveTo(PointOption.point(x, bottom_y)).release().perform();
 
@@ -100,7 +113,7 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 	}
-
+ 
 	public void verifyPage(WebElement e) {
 		System.out.println("inside verify page");
 		wait.until(ExpectedConditions.visibilityOf(e));

@@ -25,14 +25,15 @@ public class SignInPage extends BaseTest {
 
 	public void clickUseEmailbutton() {
 		click(signinpage.UseEmail_BTN);
+		System.out.println("after use email click");
 	}
 
-	public void enterSignInDetails() throws Exception {
-		clearAndType(signinpage.username_TBX, getData("TestDataSheet", 1, 0));
-		clearAndType(signinpage.password_TBX, getData("TestDataSheet", 1, 1));
+	public void enterSignInDetails(String username,String password) throws Exception {
+		clearAndType(signinpage.username_TBX, username);
+		clearAndType(signinpage.password_TBX, password);
 		click(signinpage.signin_BTN);
 	}
-
+ 
 	class PageObjects {
 
 		@CacheLookup
@@ -48,7 +49,9 @@ public class SignInPage extends BaseTest {
 		public WebElement signin_BTN;
 
 		@CacheLookup
-		@FindBy(id = "com.ebay.mobile:id/button_classic")
+		
+		@FindBy(xpath = "//*[contains(@text,'USE EMAIL OR USERNAME')]")
+//		@FindBy(id = "com.ebay.mobile:id/button_classic")
 		public WebElement UseEmail_BTN;
 
 	}
